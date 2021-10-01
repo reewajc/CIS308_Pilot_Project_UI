@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>KU Electronic</title>
+    <style>
+        html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  
+}
+
+section {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  padding: 10%;
+}
+section:nth-child(1) {
+  background: rgb(233, 231, 226);
+  color: white;
+}
+
+section:nth-child(2) {
+  background: rgb(166, 170, 170);
+  color: white;
+}
+
+section:nth-child(3) {
+  background: rgb(175, 175, 171);
+  color: rgb(255, 255, 255);
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" id="brand">KU ELECTRONIC</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" >
+                    <a class="nav-link" href="#home">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product_registration" tabindex="-1" aria-disabled="true">Product Registration</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#warranty_claim" tabindex="-1" aria-disabled="true">Warranty Claim</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#firmware_downloads" tabindex="-1" aria-disabled="true">Firmware Downloads</a>
+               </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+      <section id="product_registration">
+    
+        <div class="row" id="product_registration">
+            <h1 class="text-center">Product Registration</h1>
+             <div class="col-lg-4">
+                <img class="img-fluid" src="images/electronic.jpg" alt="">
+             </div>
+            <div class="container col-lg-8" >
+             
+               <form method="POST">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" class="form-control" id="first_name"  placeholder="Enter first name">
+                  </div>
+                  <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" class="form-control" id="last_name"  placeholder="Enter Last name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email </label>
+                    <input type="text" name="email" class="form-control" id="email"  placeholder="Enter email">
+                  </div>
+                   <div class="form-group">
+                     <label for="product_name">Product Name</label>
+                     <input type="text" name="product_name" class="form-control" id="product_name"  placeholder="Enter product name">
+                   </div>
+                   <div class="form-group">
+                       <label for="product_model">Product Model</label>
+                       <input type="text" name="product_model" class="form-control" id="product_model" placeholder="Enter product Model">
+                     </div>
+                     <div class="form-group">
+                       <label for="serial_number">Product Name</label>
+                       <input type="text" name="serial_number" class="form-control" id="serial_number"  placeholder="Serial Number">
+                     </div>
+                     <div class="form-group">
+                       <label for="purchased_date">Purchased Date</label>
+                       <input type="text" name="purchased_date" class="form-control" id="purchased_date" placeholder="Enter Purchased Date">
+                     </div>
+                
+                   <button type="submit" class="btn btn-primary">Submit</button>
+                 </form>
+            </div>
+         </div> 
+      </section>
+      <section id="warranty_claim">
+       
+        <div class="row" >
+            <h1 class="text-center">Warranty Claim</h1>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="images/warrenty.png" alt="">
+            </div>
+            <div class="col-lg-8">
+             
+               <form method="POST">
+               <div class="input-group">
+                   <div class="form-outline">
+                     <input type="search" id="form1" class="form-control" />
+                     <label class="form-label" for="form1">Please enter the serial number</label>
+                   </div>
+                   <button type="button" class="btn btn-primary">
+                     <i class="fas fa-search"></i>
+                   </button>
+                 </div>
+               </form>
+            </div>
+        </div>
+      </section>
+
+      <section id="firmware_downloads">
+          
+ <div >
+    <h1>Firmware Downloads</h1>
+   <form method="POST">
+       <div class="input-group">
+           <div class="col-lg-5">
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Please enter the serial number: </label>
+              </div>
+           </div>
+         
+           <div class="col-lg-3">
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+              </button>
+           </div>
+        
+         </div>
+       </form>
+</div>
+      </section>
+    </main>
+  </body>
+</html>
