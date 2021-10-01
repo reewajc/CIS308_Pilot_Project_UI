@@ -3,19 +3,7 @@ body, html {
   
   }
   
-  .bg {
-    /* The image used */
 
-    background-image: url("images/main.jpg");
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.3;
-  }
 
   #brand{
     font-family: 'Courier New', Courier, monospace;
@@ -27,3 +15,54 @@ body, html {
   .navbar-brand{
     margin-left: 10%;
   }
+
+  html,
+  body {
+      margin: 5px;
+      height: 100%;
+      width: 100%;
+  }
+
+  img {
+      width: 100%;
+      height: 100%;
+
+  }
+
+  main {
+      height: 100%;
+      width: 100%;
+
+  }
+
+  section {
+      font-family: sans-serif;
+      height: 100%;
+      width: 100%;
+      padding: 10%;
+  }
+
+  section:nth-child(1) {
+      background: rgb(59, 59, 58);
+      color: white;
+  }
+
+  section:nth-child(2) {
+      background: rgb(59, 59, 58);
+      color: white;
+  }
+
+  section:nth-child(3) {
+      background: rgb(59, 59, 58);
+      color: rgb(255, 255, 255);
+  }
+  section:nth-child(4) {
+      background: rgb(59, 59, 58);
+      color: rgb(255, 255, 255);
+  }
+  hr{
+      color: blueviolet;
+      height: 30%;
+  }
+
+
