@@ -1,0 +1,22 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>RegisterProuctServlet</servlet-name>
+        <servlet-class>RegisterProuctServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterProuctServlet</servlet-name>
+        <url-pattern>/RegisterProuct</url-pattern>
+    </servlet-mapping>
+
+   <servlet>
+        <servlet-name>RegisterProuctServlet</servlet-name>
+        <servlet-class>RegisterProuctServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterProuctServlet</servlet-name>
+        <url-pattern>/RegisterProuct</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
