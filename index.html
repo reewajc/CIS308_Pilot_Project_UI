@@ -16,7 +16,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" id="brand">KU ELECTRONIC</a>
+        <a class="navbar-brand" id="brand" href="#home">KU ELECTRONIC</a>
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home"> <i class="fas fa-home"></i> &nbsp;Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#product_registration"  aria-disabled="true">Product
@@ -80,10 +80,17 @@
                                 placeholder="Enter product name">
                         </div>
                         <div class="form-group">
-                            <label for="product_model">Product Model</label>
-                            <input type="text" name="product_model" class="form-control" id="product_model"
-                                placeholder="Enter product Model">
-                        </div>
+                            <label for="exampleSelect1">Product Model</label>
+                            <select class="form-control" name="product_model" id="product_model">
+                              <option>SM500</option>
+                              <option>SM501</option>
+                              <option>SM502</option>
+                            </select>
+                          </div>
+
+                        
+                    
+
                         <div class="form-group">
                             <label for="serial_number">Product Serial Number</label>
                             <input type="text" name="serial_number" class="form-control" id="serial_number"
