@@ -2,6 +2,10 @@ body, html {
     height: 100%;
   
   }
+
+  body{
+    background-color: rgb(59,59,58);
+  }
   
 
 
@@ -29,40 +33,38 @@ body, html {
 
   }
 
-  main {
-      height: 100%;
-      width: 100%;
-
-  }
+ 
 
   section {
       font-family: sans-serif;
+   
       height: 100%;
       width: 100%;
-      padding: 10%;
-  }
-
-  section:nth-child(1) {
-      background: rgb(59, 59, 58);
+      padding-top: 10%;
+      padding-left: 2%;
+      padding-right: 2%;
       color: white;
+
+    }
+
+  
+
+  .input-group{
+      margin-top: 10%;
+  }
+  #button_loststolen, #button_serialnumber{
+      margin-left: 10%;
   }
 
-  section:nth-child(2) {
-      background: rgb(59, 59, 58);
-      color: white;
+  #registrationform{
+      margin-top: 5%;
   }
 
-  section:nth-child(3) {
-      background: rgb(59, 59, 58);
-      color: rgb(255, 255, 255);
+  footer{
+      background-color: rgb(184, 125, 238);
+      font-size: x-large;
+      margin-top: 2%;
   }
-  section:nth-child(4) {
-      background: rgb(59, 59, 58);
-      color: rgb(255, 255, 255);
-  }
-  hr{
-      color: blueviolet;
-      height: 30%;
-  }
+
 
 

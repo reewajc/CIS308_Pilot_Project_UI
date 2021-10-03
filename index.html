@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>KU Electronic</title>
 
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" id="brand">KU ELECTRONIC</a>
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
@@ -23,37 +24,42 @@
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#product_registration" tabindex="-1" aria-disabled="true">Product
+                    <a class="nav-link" href="#product_registration"  aria-disabled="true">Product
                         Registration</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#warranty_claim" tabindex="-1" aria-disabled="true">Warranty Claim</a>
+                    <a class="nav-link" href="#warranty_claim" aria-disabled="true">Report Lost/Stolen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#firmware_downloads" tabindex="-1" aria-disabled="true">Firmware
+                    <a class="nav-link" href="#firmware_downloads" aria-disabled="true">Firmware
                         Downloads</a>
+                </li>
+                <!-- we might need to link to admin page-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#admin_page"  aria-disabled="true">Admin
+                        Login</a>
                 </li>
             </ul>
         </div>
     </nav>
     <main>
         <section id="home">
-           <img src="images/main.jpg" alt="">
+           <img class="img-fluid" src="images/main.jpg" alt="Picture of electronic">
         </section>
         <section id="product_registration">
-
+            <h1 class="text-center">Product Registration</h1>
+          <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
             <div class="row" id="product_registration">
-                <h1 class="text-center">Product Registration</h1>
-                <hr>
+                   
                 <div class="col-lg-4">
                     <img class="img-fluid" src="images/electronic.jpg" alt="">
                 </div>
                 <div class="container col-lg-8">
 
-                    <form method="POST">
+                    <form id="registrationform" method="POST">
                         <div class="form-group">
                             <label for="first_name">First Name</label>
                             <input type="text" name="first_name" class="form-control" id="first_name"
@@ -79,7 +85,7 @@
                                 placeholder="Enter product Model">
                         </div>
                         <div class="form-group">
-                            <label for="serial_number">Product Name</label>
+                            <label for="serial_number">Product Serial Number</label>
                             <input type="text" name="serial_number" class="form-control" id="serial_number"
                                 placeholder="Serial Number">
                         </div>
@@ -88,19 +94,19 @@
                             <input type="text" name="purchased_date" class="form-control" id="purchased_date"
                                 placeholder="Enter Purchased Date">
                         </div>
-
+                    <br>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
         </section>
         <section id="warranty_claim">
-
+            <h1 class="text-center">Report Lost/Stolen</h1>
+            <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
             <div class="row">
-                <h1 class="text-center">Warranty Claim</h1>
-                <hr>
+               
                 <div class="col-lg-4">
-                    <img class="img-fluid" src="images/warrenty.png" alt="">
+                    <img class="img-fluid" src="images/lost.jpg" alt="">
                 </div>
                 <div class="col-lg-8">
 
@@ -113,7 +119,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <button type="button" class="btn btn-primary">
+                                <button id="button_loststolen" type="button" class="btn btn-primary">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
@@ -125,10 +131,11 @@
         </section>
 
         <section id="firmware_downloads">
-
+ <h1 class="text-center">Firmware Downloads</h1>
+ <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
             <div class="row">
-                <h1 class="text-center">Firmware Downloads</h1>
-                <hr>
+               
+              
                 <div class="col-lg-4">
                     <img class="img-fluid" src="images/firmware.jpg" alt="">
                 </div>
@@ -143,8 +150,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-4">
-                                <button type="button" class="btn btn-primary">
+                            <div class="col-lg-4 ">
+                                <button type="button" class="btn btn-primary" id="button_serialnumber">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
@@ -155,7 +162,12 @@
                 </form>
             </div>
         </section>
-    </main>
+    </main> 
+
+    <footer class="text-center text-light">Website created by: David, Troy, and Ram</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
