@@ -1,0 +1,21 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>RegisterProuctServlet</servlet-name>
+        <servlet-class>RegisterProuctServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterProuctServlet</servlet-name>
+        <url-pattern>/RegisterProuct</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+         <servlet-name>ReportStolen</servlet-name>
+         <servlet-class>ReportStolen</servlet-class>
+     </servlet>
+     <servlet-mapping>
+         <servlet-name>ReportStolen</servlet-name>
+         <url-pattern>/ReportStolen</url-pattern>
+     </servlet-mapping>
+
+</web-app>
