@@ -47,7 +47,28 @@ body, html {
 
     }
 
-  
+    #home{
+      background-image: url("images/main.jpg") ;
+      background-size: cover;
+      height: 100vh;
+    
+    }
+
+    #ku{
+      border: 4px solid blue;
+      border-top-left-radius: 25%;
+    }
+
+    #greet{
+      padding-top: 10%;
+      text-align: center;
+      display: block;
+      color:purple;
+      font-weight: 900;
+      font-size: 800%;
+    }
+
+   
 
   .input-group{
       margin-top: 10%;
