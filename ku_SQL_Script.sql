@@ -1,4 +1,7 @@
-
+DROP TABLE PRODUCT_REGISTRATION;
+DROP TABLE USERS;
+DROP SEQUENCE "USERS_SEQ";
+DROP TRIGGER "BI_USERS";
 
 CREATE table PRODUCT_REGISTRATION (
 	EMAIL 			VARCHAR2(60) NOT NULL,
@@ -7,11 +10,11 @@ CREATE table PRODUCT_REGISTRATION (
 	PRODUCT_NAME 	VARCHAR2(20) NOT NULL,
 	PRODUCT_MODEL 	VARCHAR2(8)  NOT NULL,
 	SERIAL_NUMBER   VARCHAR2(10) NOT NULL,
-	PURCHASED_DATE 	DATE,
+	PURCHASED_DATE 	VARCHAR2(10),
 	STOLEN 			VARCHAR2(1) NOT NULL,
 	constraint PRODUCT_REGISTRATION_PK primary key(SERIAL_NUMBER)
 );
-	
+
 CREATE table USERS (
     ID         NUMBER(9) NOT NULL,
     EMAIL      VARCHAR2(500) NOT NULL,
@@ -22,10 +25,10 @@ CREATE table USERS (
 
 CREATE sequence "USERS_SEQ";
 
-CREATE trigger "BI_USERS"  
-  before insert on "USERS"              
-  for each row 
-begin  
+CREATE trigger "BI_USERS"
+  before insert on "USERS"
+  for each row
+begin
   if :NEW."ID" is null then
     select "USERS_SEQ".nextval into :NEW."ID" from dual;
   end if;

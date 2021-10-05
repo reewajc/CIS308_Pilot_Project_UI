@@ -9,15 +9,6 @@
         <url-pattern>/RegisterProuct</url-pattern>
     </servlet-mapping>
 
-   <servlet>
-        <servlet-name>DownloadFirmware</servlet-name>
-        <servlet-class>DownloadFirmware</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DownloadFirmware</servlet-name>
-        <url-pattern>/DownloadFirmware</url-pattern>
-    </servlet-mapping>
-
     <servlet>
          <servlet-name>ReportStolen</servlet-name>
          <servlet-class>ReportStolen</servlet-class>

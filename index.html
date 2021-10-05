@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
+    <!-- this nees to be before bootstrap  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- moved the botton two for testing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>KU Electronic</title>
 
+    <script src="js/adminFunc.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -39,7 +45,7 @@
                 </li>
                 <!-- we might need to link to admin page-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#admin_page"  aria-disabled="true">Admin
+                    <a class="nav-link" href="admin.jsp"  aria-disabled="true">Admin
                         Login</a>
                 </li>
             </ul>
@@ -51,24 +57,21 @@
         </section>
         <section id="product_registration">
             <h1 class="text-center">Product Registration</h1>
-          <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
+            <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
             <div class="row" id="product_registration">
-                   
                 <div class="col-lg-4">
                     <img class="img-fluid" src="images/electronic.jpg" alt="">
                 </div>
                 <div class="container col-lg-8">
-
-                    <form id="registrationform" method="POST">
+                    <!-- id="registrationform" -->
+                    <form method="POST">
                         <div class="form-group">
                             <label for="first_name">First Name</label>
-                            <input type="text" name="first_name" class="form-control" id="first_name"
-                                placeholder="Enter first name">
+                            <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Enter first name">
                         </div>
                         <div class="form-group">
                             <label for="last_name">Last Name</label>
-                            <input type="text" name="last_name" class="form-control" id="last_name"
-                                placeholder="Enter Last name">
+                            <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Enter Last name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email </label>
@@ -76,8 +79,7 @@
                         </div>
                         <div class="form-group">
                             <label for="product_name">Product Name</label>
-                            <input type="text" name="product_name" class="form-control" id="product_name"
-                                placeholder="Enter product name">
+                            <input type="text" name="product_name" class="form-control" id="product_name" placeholder="Enter product name">
                         </div>
                         <div class="form-group">
                             <label for="exampleSelect1">Product Model</label>
@@ -87,23 +89,19 @@
                               <option>SM502</option>
                             </select>
                           </div>
-
-                        
-                    
-
                         <div class="form-group">
                             <label for="serial_number">Product Serial Number</label>
-                            <input type="text" name="serial_number" class="form-control" id="serial_number"
-                                placeholder="Serial Number">
+                            <input type="text" name="serial_number" class="form-control" id="serial_number" placeholder="Serial Number">
                         </div>
                         <div class="form-group">
                             <label for="purchased_date">Purchased Date</label>
-                            <input type="text" name="purchased_date" class="form-control" id="purchased_date"
-                                placeholder="Enter Purchased Date">
+                            <input type="text" name="purchased_date" class="form-control" id="purchased_date" placeholder="Enter Purchased Date">
                         </div>
-                    <br>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <br>
+
                     </form>
+                    <button class="btn btn-primary" type="button" onclick="register();">Register</button>
+                    <p id="registerText"></p>
                 </div>
             </div>
         </section>
@@ -111,38 +109,40 @@
             <h1 class="text-center">Report Lost/Stolen</h1>
             <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
             <div class="row">
-               
+
                 <div class="col-lg-4">
                     <img class="img-fluid" src="images/lost.jpg" alt="">
                 </div>
                 <div class="col-lg-8">
-
                     <form method="POST">
                         <div class="input-group">
                             <div class="col-lg-5">
                                 <div class="form-outline">
-                                    <input type="search" id="form1" class="form-control" />
+                                    <input type="search" id="stolenNumber" class="form-control" />
                                     <label class="form-label" for="form1">Please enter the serial number</label>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <button id="button_loststolen" type="button" class="btn btn-primary">
+                                <button id="button_loststolen"
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="stolen();">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
-
                         </div>
+                        <p id="stolenText"></p>
                     </form>
                 </div>
             </div>
         </section>
 
         <section id="firmware_downloads">
- <h1 class="text-center">Firmware Downloads</h1>
- <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
+             <h1 class="text-center">Firmware Downloads</h1>
+             <hr style="height:2px;border:none;color:rgb(230, 32, 154);background-color:rgb(247, 20, 198);" />
             <div class="row">
-               
-              
+
+
                 <div class="col-lg-4">
                     <img class="img-fluid" src="images/firmware.jpg" alt="">
                 </div>
@@ -158,9 +158,10 @@
                             </div>
 
                             <div class="col-lg-4 ">
-                                <button type="button" class="btn btn-primary" id="button_serialnumber">
+                                <button type="button" class="btn btn-primary" id="button_serialnumber" onclick="firmware();">
                                     <i class="fas fa-search"></i>
                                 </button>
+                                <iframe id="my_iframe" style="display:none;"></iframe>
                             </div>
 
                         </div>
@@ -169,12 +170,10 @@
                 </form>
             </div>
         </section>
-    </main> 
+    </main>
 
     <footer class="text-center text-light">Website created by: David, Troy, and Ram</footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
