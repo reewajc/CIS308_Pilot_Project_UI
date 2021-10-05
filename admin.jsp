@@ -2,6 +2,8 @@
 <%@ page import = "javax.servlet.http.*"%>
 <%@ page import = "java.io.*"%>
 <%@ page import = "java.sql.*"%>
+<%@ page import = "Admin.AdminBean"%>
+<jsp:useBean id="adminBean" class="Admin.AdminBean" />
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,11 +59,11 @@
                <div class="container">
                  <form method="post" action="admin.jsp">
                     <div class="mb-3">
-                        <label for="user" class="form-label">Username</label>
+                        <label for="user" class="form-label"><jsp:getProperty name="adminBean" property="user"/></label>
                         <input type="text" class="form-control" id="user" name="user">
                     </div>
                     <div class="mb-3">
-                        <label for="pass" class="form-label">Password</label>
+                        <label for="pass" class="form-label"><jsp:getProperty name="adminBean" property="pass"/></label>
                         <input type="password" class="form-control" id="pass" name="pass">
                     </div>
                     <%-- use a hidden form element to know if we login --%>
