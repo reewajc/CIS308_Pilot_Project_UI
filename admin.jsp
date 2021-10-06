@@ -58,11 +58,11 @@
                  <form method="post" action="admin.jsp">
                     <div class="mb-3">
                         <label for="user" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="user" name="user">
+                        <input type="text" class="form-control" id="user" name="user" required>
                     </div>
                     <div class="mb-3">
                         <label for="pass" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="pass" name="pass">
+                        <input type="password" class="form-control" id="pass" name="pass" required>
                     </div>
                     <%-- use a hidden form element to know if we login --%>
                     <input type='hidden' name='login' maxlength='25' value='true'/>
