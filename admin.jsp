@@ -1,7 +1,10 @@
+
 <%@ page import = "javax.servlet.*"%>
 <%@ page import = "javax.servlet.http.*"%>
 <%@ page import = "java.io.*"%>
 <%@ page import = "java.sql.*"%>
+<%@ page import = "Admin.AdminBean"%>
+<jsp:useBean id="adminBean" class="Admin.AdminBean" />
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +20,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" id="brand"> <span id="ku">KU</span> ELECTRONIC</a>
+                <a class="navbar-brand" id="brand">KU ELECTRONIC</a>
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
@@ -57,12 +60,12 @@
                <div class="container">
                  <form method="post" action="admin.jsp">
                     <div class="mb-3">
-                        <label for="user" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="user" name="user" required>
+                        <label for="user" class="form-label"><jsp:getProperty name="adminBean" property="user"/></label>
+                        <input type="text" class="form-control" id="user" name="user">
                     </div>
                     <div class="mb-3">
-                        <label for="pass" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="pass" name="pass" required>
+                        <label for="pass" class="form-label"><jsp:getProperty name="adminBean" property="pass"/></label>
+                        <input type="password" class="form-control" id="pass" name="pass">
                     </div>
                     <%-- use a hidden form element to know if we login --%>
                     <input type='hidden' name='login' maxlength='25' value='true'/>
@@ -155,3 +158,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
+
+
