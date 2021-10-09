@@ -1,6 +1,5 @@
-// $('#registrationform').submit(function (event) {
-//     event.preventDefault();
-// }
+// Authors: Ram, David, Troy
+// Date: 10-8-2021
 function drop(){
  // make a post request to adminDB.jsp to drop users and PRODUCT_REGISTRATION
  $.post("adminDB.jsp",
